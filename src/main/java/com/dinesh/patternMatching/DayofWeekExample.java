@@ -6,6 +6,7 @@ package com.dinesh.patternMatching;
  * Below example shows based upon day it is which type of day Weekday or Weekend.
  * <p>
  * Ref: <a href="https://openjdk.org/jeps/361">JEP-361 Referecnce</a>
+ * <a href="https://docs.oracle.com/en/java/javase/17/language/pattern-matching.html">Oracle Reference </a>
  *
  */
 public class DayofWeekExample {
