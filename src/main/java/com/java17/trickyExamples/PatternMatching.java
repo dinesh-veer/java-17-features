@@ -23,6 +23,37 @@ public class PatternMatching {
         }
         System.out.println("Value of outside if " + object);
 
+
+        //if (object instanceof String s || s.length() > 10) { // ❌ Compile error : s is undefined
+        //    System.out.println("Condition passed for string: " + s);
+        //}
+            // Pattern binding through || is unsafe:
+            //If first condition fails → s does not exist.
+            //Therefore, Java disallows the second operand using s.
+
+        Object o = "Java";
+        //Pattern variable doent exists only in the negative branch:
+        if (!(o instanceof String s)) {
+            // s NOT in scope
+           // System.out.println(s);  // ❌ Compile-time error: s is undefined
+        }
+
+        //Pattern variable exists only in the positive branch:
+        if( o instanceof String s) {
+            System.out.println("Value inside if " + s);
+        }
+
+        //Assignment expression
+        if ( (o instanceof String s) == true ) {
+            //System.out.println(s);  //❌ Compile-time error: s is undefined
+        }
+        //The expression is evaluated as:
+        //(obj instanceof String s) produces a boolean
+        //That boolean is compared to true
+        //The scope of s does not escape outside the instanceof
+        //Thus s is not in scope.
+
+
         System.out.println("---------------------------------------------");
 
     }
