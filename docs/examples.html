@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java 17 Examples | Documentation</title><link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head><body><header>
+<div class="logo">Java 17 Features</div>
+<nav>
+<a href="index.html">Home</a><a href="features.html">Features</a><a href="jeps.html">JEPs</a>
+<a href="examples.html">Examples</a><a href="installation.html">Installation</a>
+<a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+</header>
+<section class="hero"><div class="hero-content"><h1>Java 17 Examples</h1><p>Runnable examples mapped to the actual source files in the Java 17 repository.</p></div></section>
+<section class="content"><h1>About the Examples</h1>
+<p>The source tree contains small, focused classes. The examples below map concepts to actual files.</p>
+<h2>Pattern Matching for instanceof</h2><p><code>com.dinesh.instaceof.InstanceOfExamples</code> covers pattern variables and guarded conditions.</p>
+<pre><code>if (obj instanceof String s &amp;&amp; s.length() &gt; 5) {
+    result = s.contains("JDK");
+}</code></pre>
+<h2>Switch Expressions</h2><p><code>DayofWeekExample</code> compares old syntax with switch expressions; <code>SwitchExamples</code> demonstrates <code>yield</code>.</p>
+<h2>Records</h2><p><code>com.dinesh.record.RecordExample</code> shows compact-constructor validation. The tricky examples cover shallow immutability, interfaces, static fields and serialization.</p>
+<h2>Sealed Classes</h2><p><code>SealedInterfaceExample</code>, <code>SealednSubclassInSameClass</code> and <code>RecordAsSubClass</code> demonstrate permitted hierarchies and records as subclasses.</p>
+<h2>Text Blocks</h2><p><code>com.dinesh.textblock.TextBlockExample</code> compares escaped strings with HTML, JSON and SQL text blocks.</p>
+<h2>Tricky Pattern Matching Cases</h2><p><code>PatternMatching</code> and <code>PatternMatching_2</code> illustrate scope, negated patterns, ternary expressions and effectively proven flow.</p>
+<h2>Pattern Matching for switch and null</h2><p><code>PatternWithNull</code> explicitly handles <code>null</code> and guarded type patterns. These examples use the Java 17 preview syntax.</p>
+<h2>Value-Based Classes</h2><p><code>WarningOnPrimitives</code> demonstrates wrapper constructor and synchronization warnings associated with JEP 390.</p></section><footer></footer><script src="script.js"></script></body></html>
