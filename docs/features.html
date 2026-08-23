@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java 17 Features | Documentation</title><link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head><body><header>
+<div class="logo">Java 17 Features</div>
+<nav>
+<a href="index.html">Home</a><a href="features.html">Features</a><a href="jeps.html">JEPs</a>
+<a href="examples.html">Examples</a><a href="installation.html">Installation</a>
+<a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+</header>
+<section class="hero"><div class="hero-content"><h1>Java 17 Features</h1><p>A practical overview of the language and runtime capabilities represented in this repository.</p></div></section>
+<section class="content"><h1>Java 17 Feature Overview</h1>
+<p>This page summarizes the features directly demonstrated by the repository.</p>
+<h2>Pattern Matching for instanceof</h2><p>JEP 394 removes the need for a separate cast after a successful type check.</p>
+<pre><code>if (value instanceof String s &amp;&amp; s.length() &gt; 5) {
+    System.out.println(s.toUpperCase());
+}</code></pre><p>Example: <code>com.dinesh.instaceof.InstanceOfExamples</code>.</p>
+<h2>Sealed Classes</h2><p>JEP 409 restricts which classes may directly extend or implement a type.</p>
+<pre><code>sealed interface Expr
+        permits ConstantExpr, PlusExpr, NegExpr {
+    int eval();
+}</code></pre>
+<h2>Records</h2><p>JEP 395 provides compact data carriers with generated accessors, constructors, equality, hashing and string representation.</p>
+<pre><code>record UserInformation(Integer id, String name, Integer age) {
+    UserInformation {
+        if (age &lt; 0) throw new IllegalArgumentException();
+    }
+}</code></pre>
+<h2>Text Blocks</h2><p>JEP 378 introduces readable multi-line string literals.</p>
+<pre><code>String json = """
+    {
+      "firstName": "Dinesh",
+      "lastName": "Veer"
+    }
+    """;</code></pre>
+<h2>Switch Expressions</h2><p>Switch expressions use arrow labels and can return values; the repository also demonstrates <code>yield</code>. JEP 361 was finalized before Java 17.</p>
+<pre><code>String result = switch (number) {
+    case 1, 2, 3 -&gt; "Low";
+    case 10 -&gt; "Exact";
+    default -&gt; {
+        yield "Other";
+    }
+};</code></pre>
+<h2>Pattern Matching for switch (Preview)</h2><p>JEP 406 was the first preview in Java 17 and is represented by the tricky examples.</p>
+<pre><code>switch (obj) {
+    case String s &amp;&amp; s.length() &gt; 5 -&gt; System.out.println("Long String");
+    case String s -&gt; System.out.println("Short String");
+    case Integer i -&gt; System.out.println("Integer");
+    case null -&gt; System.out.println("Found a null!");
+    default -&gt; System.out.println("Unknown type");
+}</code></pre>
+<h2>Value-Based Class Warnings</h2><p>JEP 390 warns about obsolete wrapper constructors and synchronization on value-based instances.</p>
+<h2>Feature Status</h2>
+<table><thead><tr><th>Feature</th><th>JEP</th><th>Java 17 Status</th></tr></thead><tbody>
+<tr><td>Pattern Matching for instanceof</td><td>394</td><td>Final</td></tr><tr><td>Records</td><td>395</td><td>Final</td></tr><tr><td>Sealed Classes</td><td>409</td><td>Final</td></tr>
+<tr><td>Text Blocks</td><td>378</td><td>Final</td></tr><tr><td>Pattern Matching for switch</td><td>406</td><td>Preview</td></tr><tr><td>Value-Based Class Warnings</td><td>390</td><td>Related Java 16 change</td></tr>
+</tbody></table></section><footer></footer><script src="script.js"></script></body></html>
