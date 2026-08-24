@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Installation | Java 17 Features</title><link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head><body><header>
+<div class="logo">Java 17 Features</div>
+<nav>
+<a href="index.html">Home</a><a href="features.html">Features</a><a href="jeps.html">JEPs</a>
+<a href="examples.html">Examples</a><a href="installation.html">Installation</a>
+<a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+</header>
+<section class="hero"><div class="hero-content"><h1>Installation & Setup</h1><p>Set up Java 17, build the repository, and run the demonstrations.</p></div></section>
+<section class="content"><h1>Prerequisites</h1><ul><li>JDK 17</li><li>Maven 3.8+ recommended</li><li>Git</li><li>IntelliJ IDEA, Eclipse or VS Code</li></ul>
+<h2>1. Install JDK 17</h2><pre><code>java -version</code></pre>
+<h2>2. Verify JAVA_HOME</h2><h3>macOS / Linux</h3><pre><code>echo $JAVA_HOME</code></pre><h3>Windows</h3><pre><code>echo %JAVA_HOME%</code></pre>
+<h2>3. Install Maven</h2><pre><code>mvn -version</code></pre>
+<h2>4. Clone the Repository</h2><pre><code>git clone https://github.com/dinesh-veer/java-17-features.git
+cd java-17-features</code></pre>
+<h2>5. Import the Project</h2><p>Open the directory as a Maven project and configure JDK 17 as the project SDK.</p>
+<h2>6. Compile the Project</h2><pre><code>mvn clean compile</code></pre>
+<h2>7. Run Tests</h2><pre><code>mvn test</code></pre>
+<h2>8. Run an Example</h2><pre><code>java -cp target/classes com.dinesh.instaceof.InstanceOfExamples
+java -cp target/classes com.dinesh.record.RecordExample
+java -cp target/classes com.dinesh.textblock.TextBlockExample</code></pre>
+<h2>9. Preview Features</h2><p>Pattern matching for <code>switch</code> was preview in Java 17.</p><pre><code>javac --enable-preview --release 17 Example.java
+java --enable-preview Example</code></pre>
+<h2>10. Clean Build</h2><pre><code>mvn clean
+mvn compile</code></pre>
+<h2>Common Problems</h2><ul><li><strong>Preview feature error:</strong> enable <code>--enable-preview</code>.</li><li><strong>Wrong JDK:</strong> verify <code>java -version</code> and <code>mvn -version</code>.</li><li><strong>IDE language level:</strong> set it to 17.</li><li><strong>Value-based warnings:</strong> warnings in <code>WarningOnPrimitives</code> are intentional.</li></ul></section><footer></footer><script src="script.js"></script></body></html>
