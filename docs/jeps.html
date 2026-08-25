@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java 17 JEPs | Documentation</title><link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head><body><header>
+<div class="logo">Java 17 Features</div>
+<nav>
+<a href="index.html">Home</a><a href="features.html">Features</a><a href="jeps.html">JEPs</a>
+<a href="examples.html">Examples</a><a href="installation.html">Installation</a>
+<a href="about.html">About</a><a href="contact.html">Contact</a>
+</nav>
+</header>
+<section class="hero"><div class="hero-content"><h1>Java 17 JEP Reference</h1><p>JEPs associated with the Java 17 features and examples in this repository.</p></div></section>
+<section class="content"><h1>Java 17 JEP Reference</h1><p>JEPs describe changes and enhancements to the JDK. This page focuses on JEPs directly demonstrated by the repository and closely related Java 17 changes.</p>
+<h2>Java 17 JEP Summary</h2><table><thead><tr><th>JEP</th><th>Feature</th><th>Status</th></tr></thead><tbody>
+<tr><td>378</td><td>Text Blocks</td><td>Final</td></tr><tr><td>390</td><td>Warnings for Value-Based Classes</td><td>Finalized in Java 16; demonstrated here</td></tr>
+<tr><td>394</td><td>Pattern Matching for instanceof</td><td>Final</td></tr><tr><td>395</td><td>Records</td><td>Final</td></tr>
+<tr><td>406</td><td>Pattern Matching for switch</td><td>Preview</td></tr><tr><td>409</td><td>Sealed Classes</td><td>Final</td></tr>
+<tr><td>403</td><td>Strongly Encapsulate JDK Internals</td><td>Final</td></tr><tr><td>411</td><td>Deprecate the Security Manager for Removal</td><td>Final</td></tr>
+<tr><td>415</td><td>Context-Specific Deserialization Filters</td><td>Final</td></tr></tbody></table>
+<h2>JEP 378 — Text Blocks</h2><p>Readable multi-line string literals for JSON, HTML and SQL.</p>
+<h2>JEP 394 — Pattern Matching for instanceof</h2><p>Pattern variables reduce boilerplate casts and are scoped according to flow analysis.</p>
+<h2>JEP 395 — Records</h2><p>Compact data carriers with generated members and canonical construction.</p>
+<h2>JEP 406 — Pattern Matching for switch</h2><p>Java 17's first preview adds type patterns, guarded patterns and explicit <code>null</code> handling to switch.</p>
+<pre><code>switch (obj) {
+    case String s &amp;&amp; s.length() &gt; 5 -&gt; "Long";
+    case String s -&gt; "Short";
+    case Integer i -&gt; "Integer";
+    case null -&gt; "Null";
+    default -&gt; "Other";
+}</code></pre>
+<h2>JEP 409 — Sealed Classes</h2><p>Sealed types restrict direct subclasses and make hierarchies explicit.</p>
+<h2>JEP 390 — Warnings for Value-Based Classes</h2><p>The repository demonstrates obsolete wrapper constructors and synchronization warnings. JEP 390 was delivered with Java 16, but remains relevant when compiling this Java 17 source.</p>
+<h2>Related Java 17 Platform JEPs</h2><ul><li><strong>JEP 403:</strong> strongly encapsulates most JDK internals.</li><li><strong>JEP 411:</strong> deprecates the Security Manager for removal.</li><li><strong>JEP 415:</strong> context-specific deserialization filters.</li></ul>
+<h2>Preview Features</h2><p>Compile and run preview examples with <code>--enable-preview</code>.</p>
+<h2>References</h2><ul><li><a href="https://openjdk.org/projects/jdk/17/">OpenJDK JDK 17</a></li><li><a href="https://openjdk.org/jeps/378">JEP 378</a></li><li><a href="https://openjdk.org/jeps/394">JEP 394</a></li><li><a href="https://openjdk.org/jeps/395">JEP 395</a></li><li><a href="https://openjdk.org/jeps/406">JEP 406</a></li><li><a href="https://openjdk.org/jeps/409">JEP 409</a></li></ul></section><footer></footer><script src="script.js"></script></body></html>
